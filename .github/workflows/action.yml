@@ -1,4 +1,4 @@
-name: self hosted runner
+name: amazon runner
 on:
   push:
     branches: [main]
