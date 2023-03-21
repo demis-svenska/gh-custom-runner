@@ -1,0 +1,27 @@
+name: self hosted runner
+on:
+  push:
+    branches: [main]
+    
+jobs:
+  build:
+      runs-on: self-hosted
+      steps:
+        - name: start build
+          run: echo "hello cloudgurus"
+      
+  test:
+    runs-on: self-hosted
+    steps:
+      - name: start test
+        run: echo "testing phase"
+  
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: start deploy
+        run: echo "deployment phase"
+      
+    
+
+  
