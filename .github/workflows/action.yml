@@ -7,20 +7,20 @@ on:
     
 jobs:
   build:
-      runs-on: Linux
+      uses: alpine
       steps:
         - name: start build
           run: echo "hello cloudgurus"
       
   test:
-    runs-on: self-hosted
+    uses: alpine
     needs: build
     steps:
       - name: start test
         run: echo "testing phase"
   
   deploy:
-    runs-on: self-hosted
+    uses: alpine
     needs: test
     steps:
       - name: start deploy
