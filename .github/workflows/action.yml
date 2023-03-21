@@ -1,14 +1,14 @@
 name: amazon runner
 on:
   push:
-    branches: [main]
+    branches: ["main"]
   pull_requests:
-    branches: [main]
+    branches: ["main"]
     
 jobs:
   build:
       runs-on: ubuntu-latest
-      
+
       steps:
         - name: start build
           run: echo "hello cloudgurus"
