@@ -7,20 +7,20 @@ on:
     
 jobs:
   build:
-      uses: alpine
+      runs_on: alpine
       steps:
         - name: start build
           run: echo "hello cloudgurus"
       
   test:
-    uses: alpine
+    runs_on: alpine
     needs: build
     steps:
       - name: start test
         run: echo "testing phase"
   
   deploy:
-    uses: alpine
+    runs_on: alpine
     needs: test
     steps:
       - name: start deploy
