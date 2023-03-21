@@ -7,21 +7,21 @@ on:
     
 jobs:
   build:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
 
       steps:
         - name: start build
           run: echo "hello cloudgurus"
       
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: build
     steps:
       - name: start test
         run: echo "testing phase"
   
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: test
     steps:
       - name: start deploy
